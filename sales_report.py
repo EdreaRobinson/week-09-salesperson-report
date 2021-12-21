@@ -13,17 +13,19 @@ for line in f:  #begins the loop
     melons = int(entries[2])  #converts datatype to integer
 
     if salesperson in salespeople:  #begins conditional
-        position = salespeople.index(salesperson) #assig
+        position = salespeople.index(salesperson) #assigns variable to indices of 'salespeople' list
 
-        melons_sold[position] += melons
+        melons_sold[position] += melons #adds qty of melons to each salesperson's list
     else:
-        salespeople.append(salesperson)
-        melons_sold.append(melons)
+        salespeople.append(salesperson) #adds salesperson to 'salespeople' list
+        melons_sold.append(melons) #adds melons to 'melons_sold' list
 
 
-print(salesperson)
-# for i in range(len(salespeople)):
-#     print(f'{salespeople[i]} sold {melons_sold[i]} melons')
+for i in range(len(salespeople)): #iterates through the 'salespeople' list
+    print(f'{salespeople[i]} sold {melons_sold[i]} melons')
 
 
 
+#The report does not include the total sales of each salesperson, which would be useful to show.
+#The report would be better if presented as a table, instead of this list of statements.
+#A dataframe with the data could easily be created to present the data as a table.
